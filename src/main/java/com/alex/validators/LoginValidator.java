@@ -15,13 +15,13 @@ public class LoginValidator implements Validator {
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         String newValue = value.toString();
         if (!Character.isLetter(newValue.charAt(0))) {
-            ResourceBundle bundle = ResourceBundle.getBundle("com.alex.nls.messages", FacesContext.getCurrentInstance().getViewRoot().getLocale());
+            ResourceBundle bundle = ResourceBundle.getBundle("nls.messages", FacesContext.getCurrentInstance().getViewRoot().getLocale());
             FacesMessage message = new FacesMessage(bundle.getString("first_letter_error"));
             message.setSeverity(FacesMessage.SEVERITY_ERROR);
             throw new ValidatorException(message);
         }
         if (value.toString().length() < 5) {
-            ResourceBundle bundle = ResourceBundle.getBundle("com.alex.nls.messages", FacesContext.getCurrentInstance().getViewRoot().getLocale());
+            ResourceBundle bundle = ResourceBundle.getBundle("nls.messages", FacesContext.getCurrentInstance().getViewRoot().getLocale());
             FacesMessage message = new FacesMessage(bundle.getString("login_length_error"));
             message.setSeverity(FacesMessage.SEVERITY_ERROR);
             throw new ValidatorException(message);

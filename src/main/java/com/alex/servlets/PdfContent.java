@@ -1,6 +1,6 @@
 package com.alex.servlets;
 
-import com.alex.controllers.SearchController;
+import com.alex.db.DataHelper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,9 +32,9 @@ public class PdfContent extends HttpServlet {
         response.setContentType("application/pdf");
         OutputStream out = response.getOutputStream();
         try {
-            int id = Integer.valueOf(request.getParameter("id"));
-            SearchController searchController = (SearchController) request.getSession(false).getAttribute("searchController");
-            byte[] content = searchController.getContent(id);
+            Long id = Long.valueOf(request.getParameter("id"));
+            // SearchController searchController = (SearchController) request.getSession(false).getAttribute("searchController");
+            byte[] content = DataHelper.getInstance().getContent(id);
             response.setContentLength(content.length);
             out.write(content);
         } catch (Exception ex) {

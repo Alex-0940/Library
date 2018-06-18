@@ -29,7 +29,7 @@
                <table align="left" width="350">
                   <tr><td align="left"> #{msg.input_name}</td><td><h:inputText id="username" value="#{user.username}" required="true" requiredMessage="#{msg.login_required}">
                      <f:validator validatorId="com.alex.validators.LoginValidator"/>
-                     <f:ajax event="keyup" render="loginError"/>
+                     <!--<f:ajax event="keyup" render="loginError"/>-->
                   </h:inputText></td>
                      <td>
                         <h:commandButton action="pages/books?faces-redirect=true" value="#{msg.entry}" styleClass="login_button" onclick="return checkValue(this.form, '#{msg.login_required}');">

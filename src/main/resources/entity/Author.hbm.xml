@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.alex.entity.Author" table="author" schema="library">
+        <id name="id">
+            <column name="id" sql-type="bigint(20)"/>
+        </id>
+        <property name="fio">
+            <column name="fio" sql-type="varchar(300)" length="300"/>
+        </property>
+        <property name="birthday">
+            <column name="birthday" sql-type="date"/>
+        </property>
+        <set name="booksById" inverse="true">
+            <key>
+                <column name="author_id"/>
+            </key>
+            <one-to-many not-found="ignore" class="com.alex.entity.Book"/>
+        </set>
+    </class>
+</hibernate-mapping>

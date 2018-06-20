@@ -3,6 +3,8 @@ package com.alex.db;
 import com.alex.entity.Author;
 import com.alex.entity.Book;
 import com.alex.entity.Genre;
+import org.hibernate.Criteria;
+import org.hibernate.Transaction;
 import com.alex.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

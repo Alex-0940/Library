@@ -19,6 +19,56 @@ public class Book {
     private String bookcol;
     private Genre genre;
     private Author author;
+    private Publisher publisher;
+
+    public Book() {
+    }
+
+    public Book(Author author, Genre genre, Publisher publisher, String name, int pageCount, String isbn, int publishYear) {
+        this.author = author;
+        this.genre = genre;
+        this.publisher = publisher;
+        this.name = name;
+        this.pageCount = pageCount;
+        this.isbn = isbn;
+        this.publishYear = publishYear;
+    }
+
+    public Book(Author author, Genre genre, Publisher publisher, String name, byte[] content, int pageCount, String isbn, int publishYear, byte[] image, String descr) {
+        this.author = author;
+        this.genre = genre;
+        this.publisher = publisher;
+        this.name = name;
+        this.content = content;
+        this.pageCount = pageCount;
+        this.isbn = isbn;
+        this.publishYear = publishYear;
+        this.image = image;
+        this.descr = descr;
+    }
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genreByGenreId) {
+        this.genre = genreByGenreId;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author authorByAuthorId) {
+        this.author = authorByAuthorId;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
+    }
 
     public long getId() {
         return id;
@@ -164,19 +214,4 @@ public class Book {
         return result;
     }
 
-    public Genre getGenre() {
-        return genre;
-    }
-
-    public void setGenre(Genre genreByGenreId) {
-        this.genre = genreByGenreId;
-    }
-
-    public Author getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(Author authorByAuthorId) {
-        this.author = authorByAuthorId;
-    }
 }

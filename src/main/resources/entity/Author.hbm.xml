@@ -16,9 +16,9 @@
         </property>
         <set name="booksById" inverse="true">
             <key>
-                <column name="author_id"/>
+                <column name="author_id" not-null="true"/>
             </key>
-            <one-to-many not-found="ignore" class="com.alex.entity.Book"/>
+            <one-to-many class="com.alex.entity.Book"/>
         </set>
     </class>
 </hibernate-mapping>

@@ -1,8 +1,19 @@
 package com.alex.entity;
 
+import java.util.Set;
+
 public class Publisher {
     private long id;
     private String name;
+    private Set<Book> booksById;
+
+    public Set<Book> getBooksById() {
+        return booksById;
+    }
+
+    public void setBooksById(Set<Book> booksById) {
+        this.booksById = booksById;
+    }
 
     public long getId() {
         return id;

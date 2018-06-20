@@ -1,12 +1,12 @@
 package com.alex.entity;
 
-import java.util.Collection;
+import java.util.Set;
 
 public class Genre {
 
     private Long id;
     private String name;
-    private Collection<Book> booksById;
+    private Set<Book> booksById;
 
     public Long getId() {
         return id;
@@ -44,11 +44,11 @@ public class Genre {
         return result;
     }
 
-    public Collection<Book> getBooksById() {
+    public Set<Book> getBooksById() {
         return booksById;
     }
 
-    public void setBooksById(Collection<Book> booksById) {
+    public void setBooksById(Set<Book> booksById) {
         this.booksById = booksById;
     }
 }

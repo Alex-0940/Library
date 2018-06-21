@@ -47,7 +47,7 @@
         <many-to-one name="author" class="com.alex.entity.Author" fetch="join">
             <column name="author_id" not-null="true"/>
         </many-to-one>
-        <many-to-one name="publisher" class="com.alex.entity.Author" fetch="join">
+        <many-to-one name="publisher" class="com.alex.entity.Publisher" fetch="join">
             <column name="publisher_id" not-null="true"/>
         </many-to-one>
     </class>

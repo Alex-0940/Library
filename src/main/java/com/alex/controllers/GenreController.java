@@ -52,7 +52,5 @@ public class GenreController implements Serializable, Converter {
     @Override
     public String getAsString(FacesContext context, UIComponent component, Object value) {
         return ((Genre) value).getId().toString();
-//        return String.valueOf(((Genre) value).getId());
-
     }
 }

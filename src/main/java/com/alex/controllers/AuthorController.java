@@ -43,7 +43,6 @@ public class AuthorController implements Serializable, Converter {
     @Override
     public String getAsString(FacesContext context, UIComponent component, Object value) {
         return ((Author)value).getId().toString();
-//        return String.valueOf(((Author) value).getId());
     }
 
     

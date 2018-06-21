@@ -1,7 +1,7 @@
 
 body {
     font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-    background-color: #EEE;
+    background-color: #eafdff;
     margin: 0;
     padding: 0;
     color: #000;
@@ -118,6 +118,16 @@ a:hover, a:active, a:focus {
     float:right;
     width: 100%;
     text-align: right;
+}
+.search_type{
+    float:left;
+    width: 10%;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.search_type_dropdown{
+    width: 85px;
 }
 
 .logo{
